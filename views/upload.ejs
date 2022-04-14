@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head.ejs')%>
+<body>
+    <%-include('../partials/nav.ejs')%>
+    <div class="content">
+       <form action='/resources' method="POST">
+           <label for="title">Course Name:</label>
+        <input type="text" id="title" name="title" placeholder="Title of the resource"required>
+        <label for="desc" >Description:</label>
+        <input type="text" id="desc" name="desc" required placeholder="Description about the resource">
+        <label for="link">Link:</label>
+        <input type="text" id="link" name="link" required placeholder="Enter link in the form https://">
+        <button>Submit</button>
+        </form>
+    </div>
+    <%-include('../partials/footer.ejs')%>
+</body>
+</html>

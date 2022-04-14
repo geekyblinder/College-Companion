@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head.ejs')%>
+<body>
+    <%-include('../partials/nav.ejs')%>
+    <div class="content papers">
+        <h2>All Resources</h2>
+        <% if(papers.length>0){ %>
+            <% papers.forEach(p=>{ %>
+            <a class="single" href="/resources/<%= p._id %>">
+            <h3 class="title"> <a href="<%=p.link %>"target='_blank'> <%=p.title%></a>
+            </h3>
+            <p class="desc"><%= p.desc %></p></a>
+           <% }) %>
+            <% } else{%>
+                <h3>No Resources to Show</h3>
+                <% } %>
+            
+    </div>
+    <%-include('../partials/footer.ejs')%>
+</body>
+</html>
